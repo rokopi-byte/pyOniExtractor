@@ -65,9 +65,9 @@ def processColor(dev,pbs,interval,dst):
 
 def main():
     p = argparse.ArgumentParser(formatter_class=argparse.RawDescriptionHelpFormatter, description="")
-    p.add_argument('-v', dest='video_path', action='store', required=True, help='path Video')
-    p.add_argument('-d', dest='dst', action='store', default='img', help='Destination Folder')
-    p.add_argument('-i', dest='interval', action='store', default=1, help='Interval')
+    p.add_argument('--v', dest='video_path', action='store', required=True, help='path Video')
+    p.add_argument('--d', dest='dst', action='store', default='img', help='Destination Folder')
+    p.add_argument('--i', dest='interval', action='store', default=1, help='Interval')
     args = p.parse_args()
     interval = int(args.interval)
     dst = args.dst
